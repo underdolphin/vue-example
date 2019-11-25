@@ -1,27 +1,28 @@
 <template lang="pug">
-    div.main-content
-        form(action)
-            input(type="text" placeholder="text" v-model="text")
-            input(type="button" value="decide" @click="submitClick")
-        
+    div#main-content
+      div#nav
+        component(v-bind:is="currentView")
 </template>
+<style lang="sass">
+
+</style>
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import axios from "axios";
+import { VContainer, VCol, VTextField, VForm, VRow } from "vuetify/lib";
+import Login from "./Login.vue";
 
-@Component
-export default class Test extends Vue {
-  text = null;
-  submitClick() {
-    text: this.text;
-
-    axios
-      .get(`/api/test/${this.text}`)
-      .then(res => {
-        console.log(res.data.name);
-      })
-      .catch(err => console.log(err));
+@Component({
+  components: {
+    VContainer,
+    VCol,
+    VTextField,
+    VForm,
+    VRow,
+    Login
   }
+})
+export default class App extends Vue {
+  currentView = "Login";
 }
 </script>

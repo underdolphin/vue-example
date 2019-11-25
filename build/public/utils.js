@@ -14,7 +14,13 @@ const sassLoader = {
   loader: "sass-loader",
   options: {
     sourceMap: "production" === process.env.NODE_ENV ? false : true,
-    outputStyle: "production" === process.env.NODE_ENV ? "compressed" : "nested"
+    outputStyle:
+      "production" === process.env.NODE_ENV ? "compressed" : "nested",
+    implementation: require("sass"),
+    sassOptions: {
+      fiber: require("fibers"),
+      indentedSyntax: true // optional
+    }
   }
 };
 

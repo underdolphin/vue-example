@@ -15,7 +15,16 @@
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "esModuleInterop": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "types": [
+            "vuetify"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/public/*"
+            ]
+        },
     },
     "include": [
         "src/public/**/*.ts"

@@ -17,5 +17,8 @@
     "strictFunctionTypes": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "types": [
+      "vuetify"
+    ]
   }
 }
