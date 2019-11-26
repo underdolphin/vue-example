@@ -7,6 +7,7 @@
           v-col
             v-btn(v-on:click="toCreateAccount" v-if="show") {{btnText}}          
 </template>
+
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
@@ -40,5 +41,7 @@ export default class User extends Vue {
 </script>
 <style lang="sass">
 .user
-  display:flex
+  width : 100%
+.user>*
+  max-width : 720px
 </style>
