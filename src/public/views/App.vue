@@ -1,10 +1,12 @@
 <template lang="pug">
-    div#main-content
-      div#nav
-        component(v-bind:is="currentView")
+  div#app
+    div#nav
+      router-link(to="/user/") Login
+    router-view
 </template>
 <style lang="sass">
-
+#app
+  text-align: center
 </style>
 <script lang="ts">
 import Component from "vue-class-component";

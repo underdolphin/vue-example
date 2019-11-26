@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "es2015",
+        "module": "esnext",
         "target": "es2018",
         "jsx": "react",
         "lib": [
@@ -13,6 +13,7 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
+        "noImplicitAny": false,
         "noFallthroughCasesInSwitch": true,
         "esModuleInterop": true,
         "experimentalDecorators": true,
