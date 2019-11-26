@@ -41,15 +41,5 @@ export default class Login extends Vue {
   rules = {
     required: value => !!value || "Required."
   };
-  // submitClick() {
-  //   text: this.text;
-
-  //   axios
-  //     .get(`/api/test/${this.text}`)
-  //     .then(res => {
-  //       console.log(res.data.name);
-  //     })
-  //     .catch(err => console.log(err));
-  // }
 }
 </script>
